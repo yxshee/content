@@ -224,7 +224,7 @@ Buffers don't always represent numbers. For example, reading a file can give you
 The following reads UTF-8 text using the {{domxref("TextDecoder")}} web API:
 
 ```js
-const buffer = new ArrayBuffer(8);
+const buffer = new ArrayBuffer(6);
 const uint8 = new Uint8Array(buffer);
 // Data manually written here, but pretend it was already in the buffer
 uint8.set([228, 189, 160, 229, 165, 189]);
@@ -235,7 +235,7 @@ console.log(text); // "你好"
 The following reads UTF-16 text using the {{jsxref("String.fromCharCode()")}} method:
 
 ```js
-const buffer = new ArrayBuffer(8);
+const buffer = new ArrayBuffer(4);
 const uint16 = new Uint16Array(buffer);
 // Data manually written here, but pretend it was already in the buffer
 uint16.set([0x4f60, 0x597d]);
